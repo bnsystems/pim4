@@ -1,0 +1,35 @@
+Requisitos
+
+ Pedido:
+ 
+ Desenvolver um sistema em linguagem C para venda
+de ingressos de teatro
+
+1. Processamento
+
+tabela de valores para os ingressos (processamento):
+	- meia-entrada (50% de desconto) - para estudantes, crianças de 02 a 12 anos, adultos
+a partir de 60 anos e professores da rede pública de ensino.
+
+	- 100% de desconto para crianças carentes da rede pública de ensino às terças-feiras. 
+
+
+O sistema deverá informar quando não existir mais lugares disponíveis e,
+consequentemente, não permitir mais a venda de ingressos para a peça em
+questão. Deverá também fazer a gestão do caixa, isto é, informar no fechamento
+do caixa todas as movimentações do dia e o saldo do fechamento. 
+
+	
+2. Saída
+
+Ao concretizar a compra do ingresso, o sistema deverá emitir (mostrar na tela) um ticket com a data, a hora, o nome da peça teatral e o número da poltrona. Nenhum espectador pode ter um ingresso com o mesmo número da poltrona de outro espectador da mesma peça teatral de um determinado horário.
+
+3. Entrada
+
+
+
+4. Observações
+
+	- adotar um modelo de ciclo de vida para o desenvolvimento do sistema para venda dos ingressos e apresentar as justificativas para escolha de tal modelo. 
+	
+	-  Também farão parte da avaliação deste PIM itens como legibilidade, organização e comentários do código-fonte, acurácia, completude, telas do programa e utilização de diversos recursos e métodos da linguagem C. 
