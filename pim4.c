@@ -20,44 +20,116 @@ Versão: 0.0.1.
 
 #include <stdio.h>
 
+void validaIdade(int idadeCliente)
+{
+	while(idadeCliente != (int)idadeCliente){	
+			prinf("\n\nVocê não digitou uma idade válida!  Tente de novo.");
+			printf("\n\nQual a sua idade em anos?\n\n");
+			scanf("%d",&idadeCliente);
+	}
+
+
+}
 
 void main ()
 { 
 	
 	int idadeCliente;
-	char diaSemana;
-	float desconto = 0;
-	char professorRedePublicaEnsino
-	int estadoSistema = "ligado"
-	
-	while(estadoSistema == "ligado"){
-		printf("\nCompra aqui seu ingresso\n\n");
-		printf("Qual a sua idade em anos?\n\n");
-		scanf("%d\n\n",&idadeCliente);
-		while(idadeCliente != (int)idadeCliente){	
-			prinf("Você não digitou uma idade válida!  Tente de novo.");
+	float renda; desconto = 0;
+	char diaSemana, professorRedePublicaEnsino = "N", estudante ="N"; desligaSistema[] = "N";
+	char estudanteRedePublicaEnsino;
+
+	while(desligaSistema == "N"){
+		printf("\nCompre aqui seu ingresso\n\n");
+		
+		/* Entrada e validação dos dados */
+		
+		do{
 			printf("Qual a sua idade em anos?\n\n");
-			scanf("%d\n\n",&idadeCliente);	
-		}
-		printf("Você é professor da rede pública de ensino? Para responder SIM, digite S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).\n\n");
-		scanf("%c",&professorRedePublicaEnsino);
-		while(professorRedePublicaEnsino != "S" || "N"){
-			prinf("Você não digitou uma resposta válida!  Tente de novo.");	
-			printf("Você é professor da rede pública de ensino? Para responder SIM, digite S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).\n\n");
-			scanf("%c",&professorRedePublicaEnsino);
-		}
-		
-		
-		
-		}
-		if (idadeCliente <= 12 || idadeCliente >= 60){
-			printf("Digite a primeira letra do dia da semana.\n\n");
-			scanf("%c", &diaSemana);
-			if(diaSemana == "t"){
-				desconto = 1;
+			scanf("%d",&idadeCliente);
+			
+			if (idadeCliente != (int)idadeCliente || idadeCliente > 150) {
+				prinf("\n\nVocê não digitou uma idade válida!  Tente de novo.");
 			}
+			
+		}while(idadeCliente != (int)idadeCliente || idadeCliente > 150);
+		
+		do{
+			printf("\n\nVocê é professor da rede pública de ensino? 
+			Para SIM, tecle S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).");
+			scanf("%c",&professorRedePublicaEnsino);
+			
+			if (professorRedePublicaEnsino != "S" || "N") {
+				prinf("\n\nVocê não digitou uma resposta válida!  Tente de novo.");
+			}
+
+		}while(professorRedePublicaEnsino != "S" || "N");
+		
+		do{
+			printf("\n\nVocê é estudante? 
+			Para SIM, tecle S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).");
+			scanf("%c",&estudante);
+			
+			if (estudante != "S" || "N") {
+				prinf("\n\nVocê não digitou uma resposta válida!  Tente de novo.");
+			}
+
+		}while(estudante != "S" || "N");
+
+		do{
+			printf("\n\nVocê é estudante? 
+			Para SIM, tecle S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).");
+			scanf("%c",&estudante);
+			
+			if (estudante != "S" || "N") {
+				prinf("\n\nVocê não digitou uma resposta válida!  Tente de novo.");
+			}
+		
+		}while(estudante != "S" || "N");
+
+		
+		if (estudante == "S") {
+			do{
+			printf("\n\nVocê estuda na rede pública de ensino? 
+			Para SIM, tecle S (MAIÚSCULO); para NÃO, digite N (MAIÚSCULO).");
+			scanf("%c",&estudanteRedePublicaEnsino);
+			
+			if (estudanteRedePublicaEnsino != "S" || "N") {
+				prinf("\n\nVocê não digitou uma resposta válida!  Tente de novo.");
+			}
+		
+		}while(estudanteRedePublicaEnsino != "S" || "N");
+		}
+		
+
+		do{
+			printf("Qual a sua renda familiar?\n\n");
+			scanf("%d",&renda);
+			
+			if (renda != (float)renda || renda < 0) {
+				prinf("\n\nVocê não digitou uma renda válida!  Tente de novo.");
+			}
+			
+		}while(renda != (float)renda || renda < 0);
+
+		do{
+			printf("Digite a primeira letra do dia da semana? Digite em LETRA MAIÚSCULA\n\n");
+			scanf("%d",&diaSemana);
+			
+			if (diaSemana != "D" || "S" || "T" || "Q" ) {
+				prinf("\n\nVocê não digitou um dia válido!  Tente de novo.\n\n");
+			}
+			
+		}while(diaSemana != "D" || "S" || "T" || "Q" );
+		
+		
+		/*Processamento dos dados - Atribuição dos descontos*/
+		
+		if (((idadeCliente >= 2 && idadeCliente <= 12) || idadeCliente >= 60) && (diaSemana=="T")){
+			desconto = 1;
+		}
 			else{
-				desconto = 
+					desconto = 
 			
 			
 			
